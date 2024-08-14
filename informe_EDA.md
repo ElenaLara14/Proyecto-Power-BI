@@ -129,7 +129,7 @@ ________________________________________
 - **Tipo de Dato:** `object`OK
 - **Transformaciones:** Ninguna.
 - **Tratamiento de Nulos:** 
-- 
+- Undefined
 
 ### 14. country 🌍 (País de origen del cliente)
 - **Nulos:** 117823 (64.43%) ⚠️
@@ -138,8 +138,8 @@ ________________________________________
 - **Tipo de Dato:** `object`OK
 - **Transformaciones:** Ninguna.
 - **Tratamiento de Nulos:** 
+-Desconocido
  
-
 ### 15. market_segment 🎯 (Segmento de mercado al que pertenece la reserva)
 - **Nulos:** 122943 (67.23%) ⚠️
 - **Unique:** 8
@@ -147,6 +147,7 @@ ________________________________________
 - **Tipo de Dato:** `object`OK
 - **Transformaciones:** Ninguna.
 - **Tratamiento de Nulos:** 
+-UNDEFINED
   
 
 ### 16. distribution_channel 📢 (Canal de distribución utilizado)
@@ -156,6 +157,7 @@ ________________________________________
 - **Tipo de Dato:** `object`OK
 - **Transformaciones:** Ninguna.
 - **Tratamiento de Nulos:** 
+-UNDEFINED
 
 ### 17. is_repeated_guest 🔁 (Indica si el cliente es un huésped repetido)
 - **Nulos:** 68501 (37.46%) ⚠️
@@ -163,8 +165,9 @@ ________________________________________
 - **Valores Únicos:** 0.0, nan, 1.0
 - **Tipo de Dato:** `float64`
 - **Transformaciones:** 
-  - Cambiar tipo de dato de `float` a booleano (`True/False`) o `int`???
+  - Cambiar tipo de dato de `float` a booleano (`True/False` O YES O NO) 
 - **Tratamiento de Nulos:** 
+DESCONOCIDO
  
 
 ### 18. previous_cancellations ❌ (Número de reservas canceladas antes)
@@ -175,7 +178,7 @@ ________________________________________
 - **Transformaciones:** 
   - Cambiar tipo de dato de `float` a `int64`.
 - **Tratamiento de Nulos:** 
-  
+  CAMBIAR A 0 FILLNA
 
 ### 19. previous_bookings_not_canceled ✔️ (Número de reservas no canceladas)
 - **Nulos:** 63487 (34.72%) ⚠️
@@ -185,7 +188,7 @@ ________________________________________
 - **Transformaciones:** 
   - Cambiar tipo de dato de `float` a `int64`.
 - **Tratamiento de Nulos:** 
-
+ CAMBIAR A 0 FILLNA
 
 ### 20. reserved_room_type 🛏️ (Tipo de habitación reservada)
 - **Nulos:** 103602 (56.65%) ⚠️
@@ -194,7 +197,7 @@ ________________________________________
 - **Tipo de Dato:** `object`OK
 - **Transformaciones:** Ninguna.
 - **Tratamiento de Nulos:** 
-  -
+  - POR LA MAS FRECUENTE MODA
 
 ### 21. assigned_room_type 🛏️ (Tipo de habitación asignada en la reserva)
 - **Nulos:** 63487 (34.72%) ⚠️
@@ -203,7 +206,7 @@ ________________________________________
 - **Tipo de Dato:** `object`OK
 - **Transformaciones:** Ninguna.
 - **Tratamiento de Nulos:** 
-  -
+  -POR LA MAS FRECUENTE MODA
 
 ### 22. booking_changes 🔄 (Número de cambios realizados en la reserva)
 - **Nulos:** 63459 (34.70%) ⚠️
@@ -213,7 +216,7 @@ ________________________________________
 - **Transformaciones:** 
   - Cambiar tipo de dato de `float` a `int64`.
 - **Tratamiento de Nulos:** 
-  -
+  -CAMBIAR A 0 FILLNA
 
 ### 23. agent 🧑‍💼 (Identificador del agente involucrado)
 - **Nulos:** 79827 (43.65%) ⚠️
@@ -223,7 +226,7 @@ ________________________________________
 - **Transformaciones:** 
   - Cambiar tipo de dato de `float` a `int64`.
 - **Tratamiento de Nulos:** 
-  - 
+  - CAMBIAR A 0 FILLNA 
 
 ### 24. company 🏢 (Identificador de la compañía involucrada)
 - **Nulos:** 179007 (97.88%) ⚠️
@@ -243,7 +246,7 @@ ________________________________________
 - **Transformaciones:** 
   - Cambiar tipo de dato de `float` a `int64`.
 - **Tratamiento de Nulos:** 
-  - 
+  - CAMBIAR A 0 FILLNA
 
 ### 26. customer_type 👥 (Tipo de cliente)
 - **Nulos:** 88678 (48.49%) ⚠️
@@ -252,7 +255,7 @@ ________________________________________
 - **Tipo de Dato:** `object`OK
 - **Transformaciones:** Ninguna.
 - **Tratamiento de Nulos:** 
-  - 
+  - DESCONOCIDO
 
 ### 27. adr 💵 (Tarifa promedio diaria pagada por la reserva)
 - **Nulos:** 63487 (34.72%) ⚠️
@@ -261,7 +264,7 @@ ________________________________________
 - **Tipo de Dato:** `float64`OK
 - **Transformaciones:** Ninguna.
 - **Tratamiento de Nulos:** 
-  - .
+  - MEDIA
 
 ### 28. required_car_parking_spaces 🚗 (Número de espacios de estacionamiento requeridos)
 - **Nulos:** 63487 (34.72%) ⚠️
@@ -271,7 +274,7 @@ ________________________________________
 - **Transformaciones:** 
   - Cambiar tipo de dato de `float` a `int64`.
 - **Tratamiento de Nulos:** 
-  - 
+  - PONER 0 FILLNA
 
 ### 29. total_of_special_requests ✅ (Número total de solicitudes especiales)
 - **Nulos:** 63487 (34.72%) ⚠️
@@ -281,7 +284,7 @@ ________________________________________
 - **Transformaciones:** 
   - Cambiar tipo de dato de `float` a `int64`.
 - **Tratamiento de Nulos:** 
-  - 
+  - PONER 0 FILLNA
 
 ### 30. reservation_status 📋 (Estado de la reserva)
 - **Nulos:** 63487 (34.72%) ⚠️
@@ -290,15 +293,15 @@ ________________________________________
 - **Tipo de Dato:** `object`OK
 - **Transformaciones:** Ninguna.
 - **Tratamiento de Nulos:** 
-  - 
+  - DESCONOCIDO O NO SHOW
 
 ### 31. reservation_status_date 📅 (Fecha del estado de la reserva)
-**Nulos:** 991 (0.52%) ⚠️
+**Nulos:** 991 (40%) ⚠️
 **Unique:** 1589
 **Valores Únicos:** '2015-07-01 00:00:00', '2015-07-02 00:00:00', ..., '2027-11-31', '2024-11-31', etc
 **Tipo de Dato:** object (fecha)
 - **Transformaciones:** Cambiar a fecha en TABLEAU.
-**Tratamiento de Nulos:** 
+**Tratamiento de Nulos:** VER QUE HACEMOS CON ELLA 
 
 ### 32. 0 (Columna sin nombre específico)
 **Nulos:** 139926 (76.51%) ⚠️
