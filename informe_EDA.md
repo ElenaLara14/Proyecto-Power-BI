@@ -8,8 +8,8 @@ ________________________________________
 - **Unique:** 2
 - **Valores Únicos:** Resort Hotel, City Hotel, nan
 - **Tipo de Dato:** `object` OK
-- **Tratamiento de Nulos:** 
-  - Imputar nulos con "Desconocido".
+- **Tratamiento de Nulos:** OK
+  - Imputar nulos con "Desconocido". 
   
 
 ### 2. is_canceled ❌ (Indica si la reserva fue cancelada)
@@ -17,8 +17,8 @@ ________________________________________
 - **Unique:** 2
 - **Valores Únicos:** False, True, nan
 - **Tipo de Dato:** `object` OK
-- **Tratamiento de Nulos:** 
-  - Imputar nulos con "Desconocido".
+- **Tratamiento de Nulos:** OK
+  - Imputar nulos con "Desconocido". 
   
 
 ### 3. lead_time ⏳ (Número de días entre la fecha de reserva y la fecha de llegada)
@@ -28,7 +28,7 @@ ________________________________________
 - **Transformaciones:** 
   - Cambiar tipo de dato de `float` a `int64`.
 - **Tratamiento de Nulos:** 
-  - Imputar nulos con la mediana o media ??
+  - Imputar nulos con la mediana por método
   
 
 ### 4. arrival_date_year 📅 (Año de llegada al hotel)🚩🚩
@@ -38,8 +38,8 @@ ________________________________________
 - **Tipo de Dato:** `float64`
 - **Transformaciones:** 
   - Cambiar tipo de dato de `float` a `int64`.
-- **Tratamiento de Nulos:** 
-  - fillna (0)?
+- **Tratamiento de Nulos:** OK
+  - fillna (0)
 
 ### 5. arrival_date_month 📆 (Mes de llegada al hotel)🚩🚩
 - **Nulos:** 63487 (34.72%) ⚠️
@@ -48,7 +48,7 @@ ________________________________________
 - **Tipo de Dato:** `object`OK
 - **Transformaciones:** 
 - Convertir todos los valores numéricos a nombres de meses correspondientes.
-- **Tratamiento de Nulos:** 
+- **Tratamiento de Nulos:** OK
   - Imputar nulos con "Desconocido".
 
 ### 6. arrival_date_week_number 📅 (Número de la semana de llegada al hotel)
@@ -65,8 +65,8 @@ ________________________________________
 - **Tipo de Dato:** `float64`
 - **Transformaciones:** 
   - Cambiar tipo de dato de `float` a `int64`.
-- **Tratamiento de Nulos:** 
-  - Imputar nulos con el día más frecuente o mediana del mes o KNN
+- **Tratamiento de Nulos:** OK
+  - fillna (0)
 
 ### 8. stays_in_weekend_nights 🛏️ (Número de noches durante el fin de semana)
 - **Nulos:** 63387 (34.66%) ⚠️
@@ -76,7 +76,7 @@ ________________________________________
 - **Transformaciones:** 
   - Cambiar tipo de dato de `float` a `int64`.
 - **Tratamiento de Nulos:** 
-  - Imputar nulos con la mediana o la moda del número de noches.
+  - Imputar nulos con la mediana 
   
 
 ### 9. stays_in_week_nights 🛏️ (Número de noches durante la semana)
@@ -87,7 +87,7 @@ ________________________________________
 - **Transformaciones:** 
   - Cambiar tipo de dato de `float` a `int64`.
 - **Tratamiento de Nulos:** 
-  - Imputar nulos con la mediana o moda del número de noches.
+  - Imputar nulos con la mediana
  
 
 ### 10. adults 👥 (Número de adultos en la reserva)🚩🚩
@@ -97,9 +97,9 @@ ________________________________________
 - **Tipo de Dato:** `float64`
 - **Transformaciones:** 
   - Cambiar tipo de dato de `float` a `int64`.
-- **Tratamiento de Nulos:** 
-  - Imputar nulos con la mediana o moda del número de adultos o "0"
-  - Revisar valores atípicos como 51.0 y 52.0 para posible corrección antes de la imputación.
+- **Tratamiento de Nulos:** OK
+  - Imputar nulos con "0"
+  
 
 ### 11. children 🧒 (Número de niños en la reserva)🚩🚩
 - **Nulos:** 113575 (62.10%) ⚠️
@@ -108,8 +108,8 @@ ________________________________________
 - **Tipo de Dato:** `float64`
 - **Transformaciones:** 
   - Cambiar tipo de dato de `float` a `int64`.
-- **Tratamiento de Nulos:** 
-  - Imputar nulos con la mediana o moda del número de niño o "0"
+- **Tratamiento de Nulos:** OK
+  - Imputar nulos con "0"
   
 ### 12. babies 👶 (Número de bebés en la reserva)🚩🚩
 - **Nulos:** 63446 (34.69%) ⚠️
@@ -118,9 +118,9 @@ ________________________________________
 - **Tipo de Dato:** `float64`
 - **Transformaciones:** 
   - Cambiar tipo de dato de `float` a `int64`.
-- **Tratamiento de Nulos:** 
-  - Imputar nulos con la mediana o moda del número de bebés.
-  - 
+- **Tratamiento de Nulos:** OK
+  - Imputar nulos con "0".
+  
 
 ### 13. meal 🍽️ (Tipo de comida incluida en la reserva)
 - **Nulos:** 63487 (34.72%) ⚠️
@@ -128,7 +128,7 @@ ________________________________________
 - **Valores Únicos:** 'BB', 'FB', 'HB', 'SC', 'Undefined'
 - **Tipo de Dato:** `object`OK
 - **Transformaciones:** Ninguna.
-- **Tratamiento de Nulos:** 
+- **Tratamiento de Nulos:** OK
 - Undefined
 
 ### 14. country 🌍 (País de origen del cliente)
@@ -137,7 +137,7 @@ ________________________________________
 - **Valores Únicos:** PRT, nan, GBR, USA, ESP, etc
 - **Tipo de Dato:** `object`OK
 - **Transformaciones:** Ninguna.
-- **Tratamiento de Nulos:** 
+- **Tratamiento de Nulos:**  OK
 -Desconocido
  
 ### 15. market_segment 🎯 (Segmento de mercado al que pertenece la reserva)
@@ -146,7 +146,7 @@ ________________________________________
 - **Valores Únicos:**  'Aviation', 'Complementary', 'Corporate', 'Direct', 'Groups', 'Offline TA/TO', 'Online TA', 'Undefined'
 - **Tipo de Dato:** `object`OK
 - **Transformaciones:** Ninguna.
-- **Tratamiento de Nulos:** 
+- **Tratamiento de Nulos:** OK
 -UNDEFINED
   
 
@@ -156,7 +156,7 @@ ________________________________________
 - **Valores Únicos:** 'Corporate', 'Direct', 'GDS', 'TA/TO', 'Undefined'
 - **Tipo de Dato:** `object`OK
 - **Transformaciones:** Ninguna.
-- **Tratamiento de Nulos:** 
+- **Tratamiento de Nulos:**  OK
 -UNDEFINED
 
 ### 17. is_repeated_guest 🔁 (Indica si el cliente es un huésped repetido)
@@ -177,7 +177,7 @@ DESCONOCIDO
 - **Tipo de Dato:** `float64`
 - **Transformaciones:** 
   - Cambiar tipo de dato de `float` a `int64`.
-- **Tratamiento de Nulos:** 
+- **Tratamiento de Nulos:** OK
   CAMBIAR A 0 FILLNA
 
 ### 19. previous_bookings_not_canceled ✔️ (Número de reservas no canceladas)
@@ -187,7 +187,7 @@ DESCONOCIDO
 - **Tipo de Dato:** `float64`
 - **Transformaciones:** 
   - Cambiar tipo de dato de `float` a `int64`.
-- **Tratamiento de Nulos:** 
+- **Tratamiento de Nulos:** OK
  CAMBIAR A 0 FILLNA
 
 ### 20. reserved_room_type 🛏️ (Tipo de habitación reservada)
@@ -196,7 +196,7 @@ DESCONOCIDO
 - **Valores Únicos:** 'A', 'B', 'C', 'D', 'E', 'F', 'G', 'H', 'L', 'P'
 - **Tipo de Dato:** `object`OK
 - **Transformaciones:** Ninguna.
-- **Tratamiento de Nulos:** 
+- **Tratamiento de Nulos:**  OK
   - POR LA MAS FRECUENTE MODA
 
 ### 21. assigned_room_type 🛏️ (Tipo de habitación asignada en la reserva)
@@ -205,7 +205,7 @@ DESCONOCIDO
 - **Valores Únicos:** C, A, D, E, G, F, I, B, H, P, L, K, NaN
 - **Tipo de Dato:** `object`OK
 - **Transformaciones:** Ninguna.
-- **Tratamiento de Nulos:** 
+- **Tratamiento de Nulos:**  OK
   -POR LA MAS FRECUENTE MODA
 
 ### 22. booking_changes 🔄 (Número de cambios realizados en la reserva)
@@ -215,7 +215,7 @@ DESCONOCIDO
 - **Tipo de Dato:** `float64`
 - **Transformaciones:** 
   - Cambiar tipo de dato de `float` a `int64`.
-- **Tratamiento de Nulos:** 
+- **Tratamiento de Nulos:** OK
   -CAMBIAR A 0 FILLNA
 
 ### 23. agent 🧑‍💼 (Identificador del agente involucrado)
@@ -225,7 +225,7 @@ DESCONOCIDO
 - **Tipo de Dato:** `float64`
 - **Transformaciones:** 
   - Cambiar tipo de dato de `float` a `int64`.
-- **Tratamiento de Nulos:** 
+- **Tratamiento de Nulos:** OK
   - CAMBIAR A 0 FILLNA 
 
 ### 24. company 🏢 (Identificador de la compañía involucrada)
@@ -245,7 +245,7 @@ DESCONOCIDO
 - **Tipo de Dato:** `float64`
 - **Transformaciones:** 
   - Cambiar tipo de dato de `float` a `int64`.
-- **Tratamiento de Nulos:** 
+- **Tratamiento de Nulos:** OK
   - CAMBIAR A 0 FILLNA
 
 ### 26. customer_type 👥 (Tipo de cliente)
@@ -254,7 +254,7 @@ DESCONOCIDO
 - **Valores Únicos:** Transient, nan, Contract, Transient-Party, Group
 - **Tipo de Dato:** `object`OK
 - **Transformaciones:** Ninguna.
-- **Tratamiento de Nulos:** 
+- **Tratamiento de Nulos:**  OK
   - DESCONOCIDO
 
 ### 27. adr 💵 (Tarifa promedio diaria pagada por la reserva)
@@ -273,7 +273,7 @@ DESCONOCIDO
 - **Tipo de Dato:** `float64`
 - **Transformaciones:** 
   - Cambiar tipo de dato de `float` a `int64`.
-- **Tratamiento de Nulos:** 
+- **Tratamiento de Nulos:** OK
   - PONER 0 FILLNA
 
 ### 29. total_of_special_requests ✅ (Número total de solicitudes especiales)
@@ -283,7 +283,7 @@ DESCONOCIDO
 - **Tipo de Dato:** `float64`
 - **Transformaciones:** 
   - Cambiar tipo de dato de `float` a `int64`.
-- **Tratamiento de Nulos:** 
+- **Tratamiento de Nulos:** OK
   - PONER 0 FILLNA
 
 ### 30. reservation_status 📋 (Estado de la reserva)
@@ -292,7 +292,7 @@ DESCONOCIDO
 - **Valores Únicos:** Check-Out, Canceled, No-Show, nan
 - **Tipo de Dato:** `object`OK
 - **Transformaciones:** Ninguna.
-- **Tratamiento de Nulos:** 
+- **Tratamiento de Nulos:** OK
   - DESCONOCIDO O NO SHOW
 
 ### 31. reservation_status_date 📅 (Fecha del estado de la reserva)
