@@ -264,7 +264,7 @@ DESCONOCIDO
 - **Tipo de Dato:** `float64`OK
 - **Transformaciones:** Ninguna.
 - **Tratamiento de Nulos:** 
-  - MEDIA
+  - MEDIA       
 
 ### 28. required_car_parking_spaces 🚗 (Número de espacios de estacionamiento requeridos)
 - **Nulos:** 63487 (34.72%) ⚠️
